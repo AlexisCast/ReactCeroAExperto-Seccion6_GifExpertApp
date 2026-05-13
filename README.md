@@ -6,3 +6,4 @@
 
 - feat 1: estrcutura inicial del proyecto
 - feat 2: pensando en componentes
+- feat 3: manejando estados
