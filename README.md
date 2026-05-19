@@ -8,3 +8,4 @@
 - feat 2: pensando en componentes
 - feat 3: manejando estados
 - feat 4: useEffect Debounce
+- feat 5: handleSearch update
