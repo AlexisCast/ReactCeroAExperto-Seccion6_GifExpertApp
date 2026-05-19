@@ -1,4 +1,4 @@
-# React Cero a Experto: 01 - Reforzamiento
+# React Cero a Experto: 06/07 - Reforzamiento
 
 ## Branches
 
@@ -12,3 +12,7 @@
 - feat 6: getGifs by Axios
 - feat 7: env variables
 - feat 8: show Gifs
+
+#### Seccion 7 - GifsExpertApp
+
+- feat 9: useGifs custom hook

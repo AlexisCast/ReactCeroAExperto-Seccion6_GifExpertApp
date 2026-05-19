@@ -12,7 +12,7 @@ export const getGifsByQuery = async (query: string): Promise<Gif[]> => {
     }
   })
   console.log(response.data);
-
+  // @ts-expect-error expected
   return response.data.data.map((gif) => ({
     id: gif.id,
     title: gif.title,
