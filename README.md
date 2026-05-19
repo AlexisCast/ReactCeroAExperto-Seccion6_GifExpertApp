@@ -10,3 +10,4 @@
 - feat 4: useEffect Debounce
 - feat 5: handleSearch update
 - feat 6: getGifs by Axios
+- feat 7: env variables
