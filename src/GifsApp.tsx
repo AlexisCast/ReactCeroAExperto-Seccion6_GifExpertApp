@@ -5,6 +5,7 @@ import PreviousSearches from "./gifs/PreviousSearches";
 import { mockGifs } from "./mock-data/gifs.mock";
 import { GiftList } from "./gifs/GiftList";
 import { useState } from "react";
+import { getGifsByQuery } from "./gifs/actions/get-gifs-by-query.action";
 
 export const GifsApp = () => {
 	const [previousTerms, setPreviousTerms] = useState(["dragon ball z"]);
@@ -13,7 +14,7 @@ export const GifsApp = () => {
 		console.log("🚀 ~ handleTermClicked ~ term:", term);
 	};
 
-	const handleSearch = (query: string) => {
+	const handleSearch = async (query: string) => {
 		query = query.trim().toLowerCase();
 
 		if (query.length === 0) return;
@@ -23,6 +24,9 @@ export const GifsApp = () => {
 		setPreviousTerms((prev) => [query, ...prev].slice(0, 8));
 
 		console.log("🚀 ~ handleSearch ~ term:", query);
+
+		const gifs = await getGifsByQuery(query);
+		console.log({ gifs });
 	};
 
 	return (

@@ -9,3 +9,4 @@
 - feat 3: manejando estados
 - feat 4: useEffect Debounce
 - feat 5: handleSearch update
+- feat 6: getGifs by Axios
