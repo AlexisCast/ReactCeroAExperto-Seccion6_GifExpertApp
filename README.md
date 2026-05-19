@@ -11,3 +11,4 @@
 - feat 5: handleSearch update
 - feat 6: getGifs by Axios
 - feat 7: env variables
+- feat 8: show Gifs
