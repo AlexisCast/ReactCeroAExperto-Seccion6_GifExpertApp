@@ -2,13 +2,14 @@ import { CustomHeader } from "./shared/components/CustomHeader";
 import { SearchBar } from "./shared/components/SearchBar";
 import PreviousSearches from "./gifs/PreviousSearches";
 
-import { mockGifs } from "./mock-data/gifs.mock";
 import { GiftList } from "./gifs/GiftList";
 import { useState } from "react";
 import { getGifsByQuery } from "./gifs/actions/get-gifs-by-query.action";
+import type { Gif } from "./gifs/interfaces/gif.interface";
 
 export const GifsApp = () => {
-	const [previousTerms, setPreviousTerms] = useState(["dragon ball z"]);
+	const [gifs, setGifs] = useState<Gif[]>([]);
+	const [previousTerms, setPreviousTerms] = useState<string[]>([]);
 
 	const handleTermClicked = (term: string) => {
 		console.log("🚀 ~ handleTermClicked ~ term:", term);
@@ -27,6 +28,8 @@ export const GifsApp = () => {
 
 		const gifs = await getGifsByQuery(query);
 		console.log({ gifs });
+
+		setGifs((prev) => [...gifs, ...prev]);
 	};
 
 	return (
@@ -46,7 +49,7 @@ export const GifsApp = () => {
 				onLabelClicked={handleTermClicked}
 			/>
 
-			<GiftList gifs={mockGifs} />
+			<GiftList gifs={gifs} />
 		</>
 	);
 };
