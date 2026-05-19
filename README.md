@@ -1,4 +1,4 @@
-# React Cero a Experto: 06/07 - Reforzamiento
+# React Cero a Experto: 06/07 - GifsExpertApp
 
 ## Branches
 
@@ -16,3 +16,4 @@
 #### Seccion 7 - GifsExpertApp
 
 - feat 9: useGifs custom hook
+- feat 10: manage cache
