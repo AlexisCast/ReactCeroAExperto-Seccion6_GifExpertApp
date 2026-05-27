@@ -17,3 +17,4 @@
 
 - feat 9: useGifs custom hook
 - feat 10: manage cache
+- feat 11: useRef
